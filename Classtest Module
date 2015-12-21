@@ -1,0 +1,51 @@
+Module Module1
+    Private myProdukt As Produkt
+
+    Sub Main()
+
+        'dessa värden ska bestämmas utifrån vad som addas i AddItem
+        'Dim längdvar = 2
+        'Dim prisvar = 19
+        'Dim provar = "2x2"
+
+        'myProdukt = New Produkt With {.Längd = längdvar,
+        '         .Pris = prisvar, .Product = provar}
+
+        'Console.WriteLine(myProdukt.ToString)
+
+        'text1()
+
+
+        Dim produkter As New List(Of Produkt)
+
+        produkter.Add(New Produkt() With {.Pris = 26,
+                    .Längd = 3, .Product = "2x4"})
+
+        produkter.Add(New Produkt() With {.Pris = 34,
+                      .Längd = 4, .Product = "2x5"})
+
+        '_highscorelist.add(new highscorerow with {.name = txtname.text, .score = CINT(txtscore.tostring)
+
+
+        Console.WriteLine()
+        For Each aProdukter As Produkt In produkter
+            Console.WriteLine(aProdukter)
+        Next
+
+
+
+
+
+        Console.ReadLine()
+    End Sub
+
+
+
+    Sub text1()
+        Dim str As String
+        str = myProdukt.Längd & Environment.NewLine & myProdukt.Product &
+            Environment.NewLine & myProdukt.Pris
+        Console.WriteLine(str.ToString)
+    End Sub
+
+End Module
